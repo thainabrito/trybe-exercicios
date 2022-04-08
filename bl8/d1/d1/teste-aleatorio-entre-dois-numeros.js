@@ -1,1 +1,0 @@
-console.log((Math.random() * (50 - 15) + 15).toFixed());
