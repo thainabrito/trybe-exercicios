@@ -1,0 +1,56 @@
+* {
+    font-size: large;
+}
+
+body {
+    margin: 30px;
+}
+
+h1 {
+    font-size: medium;
+}
+h2 {
+
+}
+
+img {
+    max-width: 100%;
+    margin: 15px;
+    /* width: 500px; */
+}
+
+figure {
+    margin: 0;
+}
+
+@media (min-width: 500px) {
+    body {
+        background-color: pink;
+        margin: 35px;
+    }
+
+    p {
+        font-size: x-large;
+    }
+
+    figure {
+        float: left;
+        text-align: center;
+    }
+
+  }
+
+@media (min-width: 1300px) {
+    body {
+        background-color: lightsteelblue;
+        margin: 35px;
+    }
+
+    p {
+        font-size: x-large;
+    }
+
+    body {
+        max-width: 1130px;
+    }
+  }

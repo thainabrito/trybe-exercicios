@@ -1,0 +1,8 @@
+//retorna maior valor, como inicial é 100 então é o maior
+
+const numbers = [50, 85, -30, 3, 15];
+
+const getBigger = (bigger, number) => ((bigger > number) ? bigger : number);
+
+const bigger = numbers.reduce(getBigger, 100);
+console.log(bigger); // 85
