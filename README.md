@@ -1,1 +1,1 @@
-Curso de desenvolvimento web.
+Curso de desenvolvimento web Trybe.
