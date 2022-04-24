@@ -1,0 +1,75 @@
+distinct - remover dados duplicados
+AS - para dar nomes às suas colunas (apelido alias)
+divisão mostra 4 casas depois da vírgula
+
+SELECT now();   mostra data e hora
+SELECT now() as 'Data Atual';
+
+SELECT * FROM nomedobancodedados.nomedatabela;
+ex: SELECT * FROM sakila.city;
+ou
+USE nomedobancodedados; (USE que é pra usar aquele banco sempr sem ficar repetindo)
+SELECT * FROM nomedatabela;
+
+* significa que é para pegar tudo
+
+
+pegar coluna especifica da dabela:
+USE nomedobancodedados;
+SELECT nomedacoluna FROM nomedatabela;
+ex: SELECT country_id FROM sakila.city;
+
+mais de uma coluna da dabela:
+USE nomedobandodedados;
+SELECT nomedacoluna, outracoluna FROM nomedatabela;
+ex: SELECT city_id, city FROM sakila.city;
+(trás colunas na ordem que colocar)
+
+
+SELECT CONCAT(first_name, ' ', last_name) AS 'Nome Completo' FROM sakila.actor;
+CONCAT concatenou nome e sobrenome e coloquei espaço
+
+DISTINCT - tirar dados repetidos
+ex: SELECT DISTINCT first_name, last_name FROM actor;  //tira quem ta com nome & sobrenome exatamente iguais
+
+
+
+COUNT - conta quantos tem
+USE sakila;
+SELECT COUNT(DISTINCT first_name) FROM actor;
+SELECT COUNT(DISTINCT first_name, last_name) FROM actor;
+SELECT COUNT(*) FROM address;
+
+
+WHERE - seleiona onde tem aquilo que tem o que colocou nas aspas
+ex1: SELECT COUNT(district) FROM address
+WHERE district = 'Alberta';
+ex2: SELECT COUNT(address2) FROM address
+WHERE address2 = '';
+
+para limitar a quantidade exibida basta colocar LIMIT e o numero na frente
+ex: SELECT * FROM sakila.rental LIMIT 10;
+
+pular primeiras 3 linhas por exemplo
+SELECT * FROM sakila.rental LIMIT 10 OFFSET 3;
+mostra do 4 até 13 pq está mostrando limitada a 10 coisas 4-13
+
+
+DDL : Data Definition Language - todos os comandos que lidam com o esquema, a descrição e o modo como os dados devem existir em um banco de dados:
+CREATE : Para criar bancos de dados, tabelas, índices, views, procedures, functions e triggers
+ALTER : Para alterar a estrutura de qualquer objeto
+DROP : Permite deletar objetos
+TRUNCATE : Apenas esvazia os dados dentro de uma tabela, mas a mantém no banco de dados
+DML : Data Manipulation Language - Comandos que são usados para manipular dados. São utilizados para armazenar, modificar, buscar e excluir dados em um banco de dados. Os comandos e usos mais comuns nesta categoria são:
+SELECT : usado para buscar dados em um banco de dados
+INSERT : insere dados em uma tabela
+UPDATE : altera dados dentro de uma tabela
+DELETE : exclui dados de uma tabela
+DCL : Data Control Language - Focado mais nos comandos que concedem direitos, permissões e outros tipos de controle ao sistema de banco de dados.
+GRANT : concede acesso a um usuário
+REVOKE : remove acessos concedidos através do comando GRANT
+TCL : Transactional Control Language - Lida com as transações dentro de suas pesquisas.
+COMMIT : muda suas alterações de temporárias para permanentes no seu banco de dados
+ROLLBACK : desfaz todo o impacto realizado por um comando
+SAVEPOINT : define pontos para os quais uma transação pode voltar. É uma maneira de voltar para pontos específicos de sua query
+TRANSACTION : comandos que definem onde, como e em que escopo suas transações são executadas
