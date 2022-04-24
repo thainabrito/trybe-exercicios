@@ -28,6 +28,6 @@ SELECT * FROM Provides WHERE Provider = 'HAL' ORDER BY Price DESC;
 -- EX 5
 SELECT COUNT(Provider) FROM Provides WHERE Piece = '1';
 
--- 7 da bonus (não vai rodar aqui pq é tabela de fora)
+-- 7 da bonus
 SELECT * FROM Customers WHERE NOT City = 'Berlin';
 SELECT * FROM Customers WHERE City = 'Berlin' OR City = 'London';
