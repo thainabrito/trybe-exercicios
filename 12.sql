@@ -13,21 +13,12 @@ SELECT * from Providers AS p;
 
 select * from Provides p;
 
--- ex 1 Escreva uma query para exibir a peça e o preço de tudo que é provido pela empresa RBT .
 SELECT Piece, Price FROM Provides WHERE Provider = 'RBT';
 
--- ex 2 Escreve uma query para exibir todas as informações das cinco peças com os maiores preços.
 SELECT * FROM Provides ORDER BY Price DESC LIMIT 5;
 
--- ex 3
 SELECT DISTINCT Provider, Price FROM Provides ORDER BY Price DESC LIMIT 4  OFFSET 2;
 
--- EX 4
 SELECT * FROM Provides WHERE Provider = 'HAL' ORDER BY Price DESC;
 
--- EX 5
 SELECT COUNT(Provider) FROM Provides WHERE Piece = '1';
-
--- 7 da bonus
-SELECT * FROM Customers WHERE NOT City = 'Berlin';
-SELECT * FROM Customers WHERE City = 'Berlin' OR City = 'London';
