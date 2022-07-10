@@ -1,4 +1,4 @@
--- exercicios dia 2
+-- Dia 2, bloco 20 sql, modulo 3.
 
 USE Scientists;
 SELECT 'This is SQL Exercise, Practice and Solution';
